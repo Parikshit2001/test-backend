@@ -21,6 +21,9 @@ app.listen(3000);
 
 app.use("/api/user", userRouter);
 app.use("/api/chat", chatRouter);
+app.get("/", (req, res) => {
+  res.json({ message: "Backend is up" });
+});
 
 // import { sql } from "drizzle-orm";
 // const { instrument } = require("@socket.io/admin-ui");
